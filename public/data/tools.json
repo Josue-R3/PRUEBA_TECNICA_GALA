@@ -1,0 +1,66 @@
+[
+    {
+      "id": 1,
+      "name": "Martillo",
+      "description": "Martillo de acero con mango de madera",
+      "price": 9.99,
+      "category": "Herramientas Manuales",
+      "image": "https://ingcoecuador.com/wp-content/uploads/2020/07/martillo-1.png"
+    },
+    {
+      "id": 2,
+      "name": "Destornillador de estrella",
+      "description": "Destornillador de estrella con mango ergonómico",
+      "price": 5.49,
+      "category": "Herramientas Manuales",
+      "image": "https://ingcoecuador.com/wp-content/uploads/2020/07/destornillador.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Llave inglesa",
+      "description": "Llave inglesa ajustable de acero inoxidable",
+      "price": 12.99,
+      "category": "Herramientas Manuales",
+      "image": "https://ingcoecuador.com/wp-content/uploads/2020/10/SET-LLAVES-12.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Taladro eléctrico",
+      "description": "Taladro eléctrico de 500W con múltiples velocidades",
+      "price": 49.99,
+      "category": "Herramientas Eléctricas",
+      "image": "https://ingcoecuador.com/wp-content/uploads/2020/09/rotomartillo-sd-800w.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Sierra",
+      "description": "Sierra de 1500W para cortes precisos en madera",
+      "price": 89.99,
+      "category": "Herramientas Eléctricas",
+      "image": "https://ingcoecuador.com/wp-content/uploads/2023/11/aCZdD_669185-MCO44154733758_112020-O.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Cinta métrica",
+      "description": "Cinta métrica de 5 metros con bloqueo automático",
+      "price": 3.99,
+      "category": "Accesorios",
+      "image": "https://ingcoecuador.com/wp-content/uploads/2020/07/cintamtrica.png"
+    },
+    {
+      "id": 7,
+      "name": "Silicona de Tubo",
+      "description": "Tubo de silicona para manualidades y reparaciones",
+      "price": 15.99,
+      "category": "Herramientas Eléctricas",
+      "image": "https://ingcoecuador.com/wp-content/uploads/2020/07/SILICONA.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Lijadora orbital",
+      "description": "Lijadora orbital de 200W para acabados suaves",
+      "price": 39.99,
+      "category": "Herramientas Eléctricas",
+      "image": "https://ingcoecuador.com/wp-content/uploads/2020/07/LIJADORA-ORBITAL-20V.jpg"
+    }
+  ]

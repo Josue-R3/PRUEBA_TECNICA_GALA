@@ -1,0 +1,1 @@
+//componente que envuelve cada articulo
