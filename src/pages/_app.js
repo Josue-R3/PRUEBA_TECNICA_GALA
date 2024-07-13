@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }) {
   return (
   <NextUIProvider>
     <Layout>
-    <Component {...pageProps} />;
+      <Component {...pageProps} />
     </Layout>
   </NextUIProvider>
   );
