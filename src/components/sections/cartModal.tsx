@@ -3,7 +3,7 @@ import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDi
 import CartContext from '../../context/CartContext';
 import { TiShoppingCart } from 'react-icons/ti';
 import { Tool } from '@/types/tools';
-import confetti from 'canvas-confetti';
+import { launchConfetti } from '@/utils/confetti';
 
 const CartModal: React.FC = () => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -15,7 +15,7 @@ const CartModal: React.FC = () => {
   };
 
   const handlePurchase = () => {
-    confetti();
+    launchConfetti(); // Lanza el confeti
     setShowCongrats(true);
     dispatch({ type: 'CLEAR_CART' });
   };
@@ -26,7 +26,15 @@ const CartModal: React.FC = () => {
   return (
     <>
       <div className="relative">
-        <Button isIconOnly variant="light" className="hover:bg-white text-[#FEC300] hover:text-black" onPress={() => {onOpen(); console.log('Opening modal');}}>
+        <Button 
+          isIconOnly 
+          variant="light" 
+          className="hover:bg-white text-[#FEC300] hover:text-black" 
+          onPress={() => { 
+            console.log('Opening modal'); 
+            onOpen(); 
+          }}
+        >
           <TiShoppingCart className="w-6 h-6" />
         </Button>
         {itemCount > 0 && (
@@ -46,7 +54,7 @@ const CartModal: React.FC = () => {
                     <p>Gracias por su compra. Su pedido está en camino.</p>
                   </ModalBody>
                   <ModalFooter>
-                    <Button color="primary" onPress={() => {
+                    <Button color="danger" onPress={() => {
                       setShowCongrats(false);
                       onClose();
                     }}>
@@ -92,7 +100,7 @@ const CartModal: React.FC = () => {
                     </div>
                   </ModalBody>
                   <ModalFooter>
-                    <Button color="danger" onPress={onClose}>
+                    <Button color="danger" variant="light" onPress={onClose}>
                       Cerrar
                     </Button>
                     <Button color="primary" onClick={handlePurchase}>
