@@ -11,6 +11,7 @@ const Carousel: React.FC = () => {
   const [images, setImages] = useState<ImageItem[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
 
   useEffect(() => {
     const fetchImages = async () => {
@@ -31,14 +32,25 @@ const Carousel: React.FC = () => {
     fetchImages();
   }, []);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000); // Cambia cada 3 segundos
+
+    return () => clearInterval(interval);
+  }, [images.length]);
+
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;
 
   return (
-    <div>
-      {images.map((img) => (
-        <div key={img.id}>
-          <Image src={img.image} alt={img.name} width={800} height={400} layout="responsive" />
+    <div className="relative w-full h-[600px] overflow-hidden">
+      {images.map((img, index) => (
+        <div
+          key={img.id}
+          className={`absolute inset-0 transition-opacity duration-1000 ${index === currentIndex ? 'opacity-100' : 'opacity-0'}`}
+        >
+          <Image src={img.image} alt={img.name} layout="fill" objectFit="cover" className="w-full h-full" />
         </div>
       ))}
     </div>

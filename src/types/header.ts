@@ -21,5 +21,6 @@ export const menuItems: MenuItem[] = [
       { name: "Accesorios", href: "#" }
     ] 
   },
-  { name: "Foros", href: "#" },
+  { name: "Testimonios", href: "#" },
+  { name: "Sobre Nosotros", href: "#" },
 ];

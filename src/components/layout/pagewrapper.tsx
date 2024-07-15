@@ -6,7 +6,7 @@ interface PageWrapperProps {
 
 export default function PageWrapper({ children }: PageWrapperProps) {
   return (
-    <div>
+    <div className="mt-14 w-full">
       {children}
     </div>
   );

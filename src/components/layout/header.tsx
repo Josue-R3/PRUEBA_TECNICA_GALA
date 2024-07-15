@@ -1,42 +1,54 @@
-import React from "react";
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button } from "@nextui-org/react";
+import React, { useState } from "react";
 import { menuItems } from "../../types/header";
-import { TiShoppingCart } from "react-icons/ti";
+import { TiThMenu } from "react-icons/ti";
+import { Button } from "@nextui-org/react";
+import CartModal from "../sections/cartModal";
 
 export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <Navbar isBordered className="fixed top-0 left-0 w-full z-10">
-      {/* Logo Section */}
-      <NavbarContent>
-        <NavbarBrand>
-          <div className="text-lg font-bold">LOGO</div>
-        </NavbarBrand>
-      </NavbarContent>
+    <header className="fixed top-0 left-0 w-full z-10 bg-[#1A1112] border-b border-[#FFA400]">
+      <div className="flex justify-between items-center w-full px-4 py-2">
+        {/* Logo Section */}
+        <div className="flex items-center">
+          <span className="text-4xl font-bold text-white">LOGO</span>
+        </div>
 
-      {/* Menu Items */}
-      <NavbarContent className="hidden sm:flex gap-4 justify-center flex-grow items-center">
-        {menuItems.map((item, index) => (
-          <NavbarItem key={`${item.name}-${index}`}>
-            <Link color="foreground" href={item.href}>
+        {/* Menu Items */}
+        <nav className={`hidden sm:flex gap-4 flex-grow justify-center items-center`}>
+          {menuItems.map((item, index) => (
+            <a key={index} href={item.href} className="text-white hover:text-[#FFA400] px-2 py-1">
               {item.name}
-            </Link>
-          </NavbarItem>
-        ))}
-      </NavbarContent>
+            </a>
+          ))}
+        </nav>
 
-      {/* Access Button */}
-      <NavbarContent className="justify-end items-center">
-        <NavbarItem>
-          <Button as={Link} href="#" isIconOnly variant="light" >
-            <TiShoppingCart className="w-6 h-6" />
+        {/* Shopping Cart and Menu Toggle */}
+        <div className="flex items-center gap-2">
+          <Button variant="light" isIconOnly className="sm:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            <TiThMenu className="w-6 h-6 text-[#FEC300]" />
           </Button>
-        </NavbarItem>
-        <NavbarItem>
-          <Button as={Link} href="#">
+          <CartModal />
+          <Button className="hidden sm:block bg-[#FFA400] border border-[#FEC300] hover:bg-black text-black hover:text-[#FFA400] text-base font-medium px-3 py-1 rounded">
             Acceder
           </Button>
-        </NavbarItem>
-      </NavbarContent>
-    </Navbar>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <nav className="sm:hidden bg-[#1A1112] shadow-md mt-2">
+          {menuItems.map((item, index) => (
+            <a key={index} href={item.href} className="block px-4 py-2 text-white hover:text-[#FFA400]">
+              {item.name}
+            </a>
+          ))}
+          <Button className="block w-full bg-[#FFA400] hover:bg-gray-300 text-black text-base font-medium px-4 py-2 mt-2 rounded">
+            Acceder
+          </Button>
+        </nav>
+      )}
+    </header>
   );
 }

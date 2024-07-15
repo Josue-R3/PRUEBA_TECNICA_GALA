@@ -19,8 +19,9 @@
     ],
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "typeRoots": ["./src/types", "./node_modules/@types"]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/ImageCard.js", "src/components/layout/header.tsx", "src/pages/index.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/**/*.js", "src/components/**/*.tsx", "src/pages/**/*.jsx", "src/types/**/*.d.ts"],
   "exclude": ["node_modules"]
 }

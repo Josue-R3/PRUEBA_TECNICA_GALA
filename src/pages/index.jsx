@@ -6,10 +6,13 @@ import Carousel from "../components/sections/carousel";
 export default function Home() {
   return (
     <>
-      <h1>GALA PRUEBA TECNICA</h1>
+      {/*<div className="w-screen">
       <Carousel />
-      <Products />
-      <Testimonials />
+      </div>*/}
+      <div className="m-4" >
+        <Products />
+      {/*<Testimonials />*/}
+        </div>
     </>
   );
 }
