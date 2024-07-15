@@ -1,33 +1,32 @@
 [
-    {
-      "id": 1,
-      "name": "Juan Pérez",
-      "testimonial": "Las herramientas de esta tienda son de excelente calidad. ¡Muy recomendadas!",
-      "avatar": "https://i.pravatar.cc/150?u=a042581f4e29026024d"
-    },
-    {
-      "id": 2,
-      "name": "María González",
-      "testimonial": "Compré un taladro y estoy muy satisfecha con mi compra. El servicio al cliente también es excelente.",
-      "avatar": "https://i.pravatar.cc/150?u=a042581f4e29026704d"
-    },
-    {
-      "id": 3,
-      "name": "Carlos López",
-      "testimonial": "Gran variedad de productos y precios competitivos. Definitivamente volveré a comprar.",
-      "avatar": "https://i.pravatar.cc/150?u=a048581f4e29026701d"
-    },
-    {
-        "id": 4,
-        "name": "Ana Martínez",
-        "testimonial": "El envío fue rápido y el producto llegó en perfectas condiciones. Muy buen servicio.",
-        "avatar": "https://i.pravatar.cc/150?u=a04258114e29026702d"
-    },
-    {
-      "id": 5,
-      "name": "Emilia Ramírez",
-      "testimonial": "He comprado varias veces en esta tienda y siempre he quedado satisfecho con la calidad y el precio.",
-      "avatar": "https://i.pravatar.cc/150?u=a092581d4ef9026700d"
-    }
-  ]
-  
+  {
+    "id": 1,
+    "name": "Juan Pérez",
+    "testimonial": "Las herramientas de esta tienda son de excelente calidad. \u00a1Muy recomendadas!",
+    "avatar": "https://i.pravatar.cc/150?u=a042581f4e29026024d"
+  },
+  {
+    "id": 2,
+    "name": "María González",
+    "testimonial": "Compr\u00e9 un taladro y estoy muy satisfecha con mi compra. El servicio al cliente tambi\u00e9n es excelente.",
+    "avatar": "https://i.pravatar.cc/150?u=a042581f4e29026704d"
+  },
+  {
+    "id": 3,
+    "name": "Carlos López",
+    "testimonial": "Gran variedad de productos y precios competitivos. Definitivamente volver\u00e9 a comprar.",
+    "avatar": "https://i.pravatar.cc/150?u=a048581f4e29026701d"
+  },
+  {
+    "id": 4,
+    "name": "Ana Martínez",
+    "testimonial": "El env\u00edo fue r\u00e1pido y el producto lleg\u00f3 en perfectas condiciones. Muy buen servicio.",
+    "avatar": "https://i.pravatar.cc/150?u=a04258114e29026702d"
+  },
+  {
+    "id": 5,
+    "name": "Emilia Ramírez",
+    "testimonial": "He comprado varias veces en esta tienda y siempre he quedado satisfecha con la calidad y el precio.",
+    "avatar": "https://i.pravatar.cc/150?u=a092581d4ef9026700d"
+  }
+]

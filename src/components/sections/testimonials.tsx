@@ -49,7 +49,6 @@ const Testimonials: React.FC = () => {
                 width={200}
                 height={200}
                 className="rounded-full"
-                priority={index === 0} // Usar prioridad en la primera imagen
               />
               <p className="mt-2 italic">&quot;{testimonial.testimonial}&quot;</p>
               <p className="mt-2 font-bold">{testimonial.name}</p>
