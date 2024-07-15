@@ -11,16 +11,15 @@ export interface MenuItem {
 }
 
 export const menuItems: MenuItem[] = [
-  { name: "Inicio", href: "#" },
+  { name: "Inicio", href: "#home" },
   { 
-    name: "Categorias", 
-    href: "#", 
+    name: "Productos", 
+    href: "#products", 
     subItems: [
-      { name: "Herramientas Manuales", href: "#" },
-      { name: "Herramientas Eléctricas", href: "#" },
-      { name: "Accesorios", href: "#" }
+      { name: "Herramientas Manuales", href: "#products" },
+      { name: "Herramientas Eléctricas", href: "#products" },
+      { name: "Accesorios", href: "#products" }
     ] 
   },
-  { name: "Testimonios", href: "#" },
-  { name: "Sobre Nosotros", href: "#" },
+  { name: "Testimonios", href: "#testimonials" },
 ];

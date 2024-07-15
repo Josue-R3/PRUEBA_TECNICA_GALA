@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
+import { Card, CardBody } from '@nextui-org/react';
 
 interface Testimonial {
   id: number;
@@ -36,17 +37,25 @@ const Testimonials: React.FC = () => {
   if (error) return <p>Error: {error}</p>;
 
   return (
-    <div>
-      <h2>Testimonios</h2>
-      <ul>
-        {testimonials.map((testimonial) => (
-          <li key={testimonial.id} className="mb-4 flex flex-col items-center text-center">
-            <Image src={testimonial.avatar} alt={testimonial.name} width={150} height={150} className="rounded-full" />
-            <p className="mt-2 italic">&quot;{testimonial.testimonial}&quot;</p>
-            <p className="mt-2 font-bold">{testimonial.name}</p>
-          </li>
+    <div className="testimonial-container">
+      <h2 className="text-2xl font-bold text-center my-6">Testimonios</h2>
+      <div className="testimonial-slider">
+        {testimonials.concat(testimonials).map((testimonial) => (
+          <Card key={testimonial.id} className="testimonial-card">
+            <CardBody className="flex flex-col items-center text-center">
+              <Image
+                src={testimonial.avatar}
+                alt={testimonial.name}
+                width={200}
+                height={200}
+                className="rounded-full"
+              />
+              <p className="mt-2 italic">"{testimonial.testimonial}"</p>
+              <p className="mt-2 font-bold">{testimonial.name}</p>
+            </CardBody>
+          </Card>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };

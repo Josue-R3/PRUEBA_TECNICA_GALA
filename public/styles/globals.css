@@ -1,3 +1,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+.testimonial-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 400px; /* Ajusta el tamaño según tus necesidades */
+}
+
+.testimonial-slider {
+    margin-top: 20px;
+    display: flex;
+    width: 200%; /* Aumenta el ancho para permitir la repetición de los elementos */
+    animation: slide 40s infinite linear; /* Aumenta la duración de la animación para que sea más lenta */
+  }
+  
+  .testimonial-card {
+    min-width: 400px; /* Aumenta el tamaño de cada card */
+    flex: 0 0 400px;
+    margin: 0 20px; /* Espacio entre los cards */
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%); /* Mueve el contenedor al 50% de su ancho total */
+    }
+  }
+  

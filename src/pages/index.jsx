@@ -7,12 +7,14 @@ export default function Home() {
   return (
     <>
       {/*<div className="w-screen">
-      <Carousel />
+        <Carousel />
       </div>*/}
-      <div className="m-4" >
+      <div className="m-4" id="products">
         <Products />
-      {/*<Testimonials />*/}
-        </div>
+      </div>
+      <div className="m-4" id="testimonials">
+        <Testimonials />
+      </div>
     </>
   );
 }
