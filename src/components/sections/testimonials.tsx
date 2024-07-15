@@ -40,8 +40,8 @@ const Testimonials: React.FC = () => {
     <div className="testimonial-container">
       <h2 className="text-2xl font-bold text-center my-6">Testimonios</h2>
       <div className="testimonial-slider">
-        {testimonials.concat(testimonials).map((testimonial) => (
-          <Card key={testimonial.id} className="testimonial-card">
+        {testimonials.concat(testimonials).map((testimonial, index) => (
+          <Card key={`${testimonial.id}-${index}`} className="testimonial-card">
             <CardBody className="flex flex-col items-center text-center">
               <Image
                 src={testimonial.avatar}
@@ -49,8 +49,9 @@ const Testimonials: React.FC = () => {
                 width={200}
                 height={200}
                 className="rounded-full"
+                priority={index === 0} // Usar prioridad en la primera imagen
               />
-              <p className="mt-2 italic">"{testimonial.testimonial}"</p>
+              <p className="mt-2 italic">&quot;{testimonial.testimonial}&quot;</p>
               <p className="mt-2 font-bold">{testimonial.name}</p>
             </CardBody>
           </Card>
